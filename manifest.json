@@ -1,0 +1,6 @@
+{
+  "name": "Study Tracker",
+  "version": "1.0",
+  "description": "An extension that reminds you to take study breaks",
+  "manifest_version": 2
+  }
