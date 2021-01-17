@@ -1,4 +1,6 @@
-chrome.tabs.query({active: true}, 
-    function (tabs) {
-        let url = tabs[0].url;
-});
+window.startTime = {}
+window.prevTime = {}
+
+chrome.tabs.onCreated.addListener(function (tab) {
+    window.startTime[tab.url] = Date.now()
+})
