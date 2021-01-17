@@ -14,11 +14,15 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     topPages.slice(0, 5).forEach(function (hn) {
         let diff = totalTimes[hn]
-        let hrs = Math.floor(diff / 3600000)
-        let mins = Math.floor((diff % 3600000) / 60000)
-        let secs = Math.floor(mins / 60000)
+        let hrs = Math.floor(diff / 3.6e+6)
+        let mins = Math.floor((diff % 3.6e+6) / 60000)
         const div = document.createElement('div')
-        div.textContent = `${hn}: ${hrs} hours, ${mins} minutes, ${secs} seconds`
+        if (hrs > 0) {
+            div.textContent = `${hn}: ${hrs}h ${mins}min`
+        } else {
+            let secs = Math.floor((diff % 60000) / 1000)
+            div.textContent = `${hn}: ${mins}min ${secs}s`
+        }
         document.body.appendChild(div)
     })
 }, false)

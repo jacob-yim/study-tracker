@@ -1,3 +1,4 @@
+//web activity monitor
 window.pages = []
 window.startTime = {}
 window.storedTime = {}
@@ -44,3 +45,6 @@ function closePage(url) {
     }
     window.instances[url] -= 1
 }
+
+//break timer
+window.studyLength
