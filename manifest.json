@@ -10,8 +10,9 @@
     },
   "background": {
       "scripts": ["background.js"]
+    },
+  "icons": {
+      "128": "clock.jpg"
     }
   }
-  "icons": {
-    "128": "clock.jpg"
-  }
+  
