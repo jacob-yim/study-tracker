@@ -5,9 +5,13 @@
   "manifest_version": 2,
   "browser_action": {
       "default_popup": "popup.html",
-      "default_title": "Study Tracker"
+      "default_title": "Study Tracker",
+      "default_icon": "clock.jpg"
     },
   "background": {
       "scripts": ["background.js"]
     }
+  }
+  "icons": {
+    "128": "clock.jpg"
   }
