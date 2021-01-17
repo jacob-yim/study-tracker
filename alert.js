@@ -1,1 +1,0 @@
-alert('take a study break!')
