@@ -36,7 +36,7 @@ function openPage(url) {
 
 function closePage(url) {
     if (!(url in window.instances) || (window.instances[url] == 0)) {
-        throw "hi"
+        return
     }
     if (window.instances[url] == 1) {
         window.storedTime[url] += Date.now() - window.startTime[url]
