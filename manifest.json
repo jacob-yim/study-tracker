@@ -13,6 +13,7 @@
     },
   "icons": {
       "128": "clock.png"
-    }
-  }
+    },
+  "permissions": ["tabs"]
+}
   
