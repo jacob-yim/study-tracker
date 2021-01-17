@@ -1,3 +1,5 @@
+const WEBSITES_DISPLAYED = 5
+
 document.addEventListener('DOMContentLoaded', function () {
     const bg = chrome.extension.getBackgroundPage()
     const totalTimes = {}
@@ -12,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     topPages.sort(function(hn1, hn2) {
         return totalTimes[hn2] - totalTimes[hn1]
     })
-    topPages.slice(0, 5).forEach(function (hn) {
+    topPages.slice(0, WEBSITES_DISPLAYED).forEach(function (hn) {
         let diff = totalTimes[hn]
         let hrs = Math.floor(diff / 3.6e+6)
         let mins = Math.floor((diff % 3.6e+6) / 60000)
