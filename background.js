@@ -27,7 +27,6 @@ function openPage(url) {
         window.pages.push(url)
         window.storedTime[url] = 0
         window.instances[url] = 0
-        console.log(window.pages.toString())
     }
     if (!(url in window.startTime)) {
         window.startTime[url] = Date.now()
@@ -47,4 +46,5 @@ function closePage(url) {
 }
 
 //break timer
-window.studyLength
+window.studyLength = 60
+window.breakLength = 10
