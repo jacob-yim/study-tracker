@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let mins = Math.floor((diff % 3600000) / 60000)
         let secs = Math.floor(((diff % 3600000) / 60000) / 60000)
         const div = document.createElement('div')
-        div.textContent = `${hn}: ${hrs} hours, ${mins} minutes, ${secs} seconds`
+        div.textContent = `${hn}: ${hrs} hours, ${mins} minutes, ${diff} seconds`
         document.body.appendChild(div)
     })
 }, false)
