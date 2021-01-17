@@ -6,13 +6,13 @@
   "browser_action": {
       "default_popup": "popup.html",
       "default_title": "Study Tracker",
-      "default_icon": "clock.jpg"
+      "default_icon": "clock.png"
     },
   "background": {
       "scripts": ["background.js"]
     },
   "icons": {
-      "128": "clock.jpg"
+      "128": "clock.png"
     }
   }
   
