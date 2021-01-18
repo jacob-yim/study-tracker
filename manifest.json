@@ -1,7 +1,7 @@
 {
   "name": "Study Tracker",
   "version": "1.0",
-  "description": "An extension that reminds you to take study breaks",
+  "description": "An extension that reminds you to take study breaks when you need them",
   "manifest_version": 2,
   "browser_action": {
       "default_popup": "popup.html",

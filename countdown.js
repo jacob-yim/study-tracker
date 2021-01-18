@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     const bg = chrome.extension.getBackgroundPage()
-    var timeObj = CountDownTimer.parse(5)
 
     if (!bg.studyTimer.expired()) {
         bg.studyTimer.onTick(format)
