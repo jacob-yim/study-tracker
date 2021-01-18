@@ -1,5 +1,5 @@
-const DEFAULT_STUDYLENGTH = 6
-const DEFAULT_BREAKLENGTH = 1
+const DEFAULT_STUDYLENGTH = 3600
+const DEFAULT_BREAKLENGTH = 600
 
 var favicon = []
 var pages = []
@@ -85,7 +85,9 @@ chrome.tabs.onRemoved.addListener(function (tabId, removeInfo) {
 function openPage(url) {
     if (!(pages.includes(url))) {
         favicon.push(`www.google.com/s2/favicons?domain=${url}`)
-        pages.push(url)
+        if(url != 'newtab') {
+            pages.push(url)
+        }
         storedTime[url] = 0
         instances[url] = 0
         console.log(favicon)
@@ -107,6 +109,12 @@ function closePage(url) {
     instances[url] -= 1
 }
 
+function removeHistory() {
+    for (websites in pages) {
+        pages.pop()
+    }
+}
+
 //study timer
 studyTimer.onTick(function () {
     if (this.expired()) {
@@ -121,3 +129,5 @@ breakTimer.onTick(function() {
         studyTimer.start()
     }
 })
+
+studyTimer.start()
