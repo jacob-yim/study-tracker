@@ -2,8 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const bg = chrome.extension.getBackgroundPage()
     var timeObj = CountDownTimer.parse(5)
 
-    format(timeObj.minutes, timeObj.seconds)
-
     if (!bg.studyTimer.expired()) {
         bg.studyTimer.onTick(format)
         document.getElementById("phase").textContent = "Study"
